@@ -1,0 +1,116 @@
+# ============================================================
+# ISL Gesture Recognition — .gitignore
+# ============================================================
+
+# ============================================================
+# Python
+# ============================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# ============================================================
+# Virtual Environments
+# ============================================================
+venv/
+env/
+ENV/
+.venv/
+virtualenv/
+
+# ============================================================
+# Jupyter Notebook
+# ============================================================
+.ipynb_checkpoints/
+
+# ============================================================
+# IDE / Editor
+# ============================================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swn
+*~
+
+# ============================================================
+# Operating System
+# ============================================================
+.DS_Store
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# ============================================================
+# PROJECT-SPECIFIC — LARGE FILES (DO NOT UPLOAD)
+# ============================================================
+
+# Raw dataset images (large, downloaded from Kaggle)
+datasets/
+
+# Image files (dataset images, test images)
+*.jpg
+*.jpeg
+*.png
+*.bmp
+*.gif
+*.tiff
+*.webp
+
+# ============================================================
+# Extracted Landmarks & Preprocessed Data
+# ============================================================
+csv/
+*.csv
+*.npy
+*.npz
+*.pkl
+
+# ============================================================
+# Trained Models
+# ============================================================
+models/
+*.pkl
+*.pickle
+*.joblib
+
+# ============================================================
+# Results / Outputs (can be regenerated)
+# ============================================================
+results/
+*.log
+logs/
+
+# ============================================================
+# Caches
+# ============================================================
+.cache/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# ============================================================
+# BUT KEEP THESE (whitelist overrides)
+# ============================================================
+!README.md
+!requirements.txt
+!.gitignore
+!LICENSE
+
+# Keep Python source files
+!src/*.py
+
+# Keep selected result images for documentation
+!results/rf_confusion_matrix.png
+!results/feature_importance.png
+!demo.png
+!demo.gif
