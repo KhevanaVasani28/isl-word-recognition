@@ -11,8 +11,6 @@ from config import *
 from preprocess_utils import (
     # preprocess_frame,
     extract_features_from_rgb,
-    process_hands_correctly,
-    extract_hand_features,
 )
 
 # %% =======================================================
@@ -57,7 +55,6 @@ def smooth_sequence(seq, window=3):
     ], axis=1)
     return out.astype(np.float32)
 
-
 def trim_idle_frames(seq):
     """Remove leading/trailing frames where no hands are present."""
     left_empty  = np.all(seq[:, 1:64] == 0, axis=1)
@@ -70,14 +67,12 @@ def trim_idle_frames(seq):
 
     return seq[non_empty[0]:non_empty[-1] + 1]
 
-
 def resample_to_length(seq, target_len):
     """Uniformly resample to fixed length."""
     if len(seq) == target_len:
         return seq
     idxs = np.linspace(0, len(seq) - 1, target_len).astype(int)
     return seq[idxs]
-
 
 # TESTING: Test-time augmentation (TTA) for dynamic sequences
 def predict_with_tta(model, seq, encoder, n_augments=5):
@@ -132,7 +127,6 @@ record_start_time = 0.0
 prediction_text = ""
 prediction_confidence = 0.0
 prediction_display_until = 0.0
-# recording_elapsed = 0.0
 
 print("\nPress SPACE to start recording.")
 print("Press Q to quit.\n")
@@ -298,4 +292,3 @@ cap.release()
 cv2.destroyAllWindows()
 hands.close()
 print("\nStopped.")
-
