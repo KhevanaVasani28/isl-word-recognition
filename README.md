@@ -1,6 +1,6 @@
-# 🤟 Indian Sign Language (ISL) Gesture Recognition & English Translation System
+# 🤟 Indian Sign Language (ISL) Gesture Recognition & English Translation System PART-2
 
-An AI-powered system that recognizes Indian Sign Language dynamic gestures in real time using computer vision and machine learning, with the goal of translating signs into English text.
+An AI-powered system that recognizes Indian Sign Language **dynamic gestures** in real time using computer vision and machine learning, with the goal of translating signs into English text.
 
 ![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)
 ![MediaPipe](https://img.shields.io/badge/MediaPipe-0.10+-green.svg)
@@ -32,12 +32,12 @@ This project focuses on **dynamic gestures (words)**.The system uses **MediaPipe
 isl-word-recognition/
 │
 ├── src/
-│   ├── config.py                  # Central configuration (paths, constants)
-|   ├── preprocess_utils.py        # General functions 
+│   ├── config.py                        # Central configuration (paths, constants)
+|   ├── preprocess_utils.py              # General functions 
 │   ├── extract_landmarks_video.py       # Extract landmarks from dataset images
-│   ├── preprocess_dynamic.py    # Preprocess + augment + split data
-│   ├── train_lstm.py              # Trained LSTM 
-│   └── realtime_exp_dynamic.py     # Real-time webcam prediction
+│   ├── preprocess_dynamic.py            # Preprocess + augment + split data
+│   ├── train_lstm.py                    # Trained LSTM 
+│   └── realtime_exp_dynamic.py          # Real-time webcam prediction
 │
 ├── datasets/                      
 │   ├── dynamic_gestures            # Raw gesture video dataset (not uploaded)
