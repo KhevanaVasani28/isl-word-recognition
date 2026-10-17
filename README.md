@@ -4,7 +4,7 @@ An AI-powered system that recognizes Indian Sign Language **dynamic gestures** i
 
 ![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)
 ![MediaPipe](https://img.shields.io/badge/MediaPipe-0.10+-green.svg)
-![scikit-learn](https://img.shields.io/badge/scikit--learn-1.3+-orange.svg)
+![TensorFlow](https://shields.io)
 
 ---
 
