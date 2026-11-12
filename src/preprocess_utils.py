@@ -44,9 +44,10 @@ def preprocess_frame(frame_bgr, target_size=TARGET_SIZE):
     # BGR -> RGB
     return cv2.cvtColor(canvas, cv2.COLOR_BGR2RGB)
 
+# ---The below functins are the same we used in preprocess_utils.py of isl-character-recognition project---
 
 # %% ==========================================================
-# STEP 3 : Function to Process Hands with Proper Ordering
+# STEP 1 : Function to Process Hands with Proper Ordering
 # ==========================================================
 def process_hands_correctly(multi_hand_landmarks, multi_handedness):
     """
@@ -70,7 +71,7 @@ def process_hands_correctly(multi_hand_landmarks, multi_handedness):
     return left_hand, right_hand
 
 # %% ==========================================================
-# STEP 4 : Feature Extraction for Each Hand
+# STEP 2 : Feature Extraction for Each Hand
 # ==========================================================
 def extract_hand_features(hand_landmarks, hand_type):
     """
@@ -103,7 +104,7 @@ def extract_hand_features(hand_landmarks, hand_type):
     return features
 
 # %% =======================================================
-# STEP 5 : Hand ordering 
+# STEP 3 : Hand ordering 
 # ==========================================================
 def extract_features_from_rgb(frame_rgb):
     """Returns 128-dim vector for one frame."""
