@@ -3,7 +3,26 @@ from pathlib import Path
 # Project Root
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# Add these below code to the existing config.py made during isl-character-recognition
+# Dataset
+DATASET_PATH = BASE_DIR / "datasets" / "static_gestures"
+
+# CSV Folder
+CSV_FOLDER = BASE_DIR / "csv"
+
+# Models Folder
+MODEL_FOLDER = BASE_DIR / "models"
+
+# Results Folder
+RESULT_FOLDER = BASE_DIR / "results"
+
+# Image Size (after letterboxing and resizing)
+TARGET_SIZE = (224, 224)
+
+# MediaPipe Settings
+MAX_NUM_HANDS = 2
+MIN_DETECTION_CONFIDENCE = 0.5
+
+# ---Only Add these below code to the existing config.py made during isl-character-recognition project---
 # ==========================
 # Dynamic Word Gesture Settings
 # ==========================
